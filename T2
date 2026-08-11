@@ -1,0 +1,119 @@
+/* ============================================================
+   Engineering Cockpit · Design Tokens
+   Liquid-glass design system: all colors/radii/shadows as
+   custom properties. Light is default, dark via [data-theme].
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* --- Page plane (behind the glass) --- */
+  --page-bg: #eef1f6;
+  --ambient-1: rgba(42, 120, 214, 0.20);   /* blue  */
+  --ambient-2: rgba(232, 123, 164, 0.14);  /* magenta */
+  --ambient-3: rgba(27, 175, 122, 0.12);   /* aqua  */
+
+  /* --- Glass surfaces --- */
+  --glass-bg: rgba(255, 255, 255, 0.58);
+  --glass-bg-strong: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(255, 255, 255, 0.75);
+  --glass-inner-line: rgba(11, 11, 11, 0.06);
+  --glass-shadow: 0 8px 32px rgba(23, 35, 61, 0.10), 0 1px 2px rgba(23, 35, 61, 0.06);
+  --glass-blur: 24px;
+  --glass-saturate: 1.35;
+
+  /* Effective chart surface (validated for contrast) */
+  --chart-surface: #f7f8fa;
+
+  /* --- Text --- */
+  --text-primary: #0b0d12;
+  --text-secondary: #4c5261;
+  --text-muted: #858b99;
+
+  /* --- Lines / chrome --- */
+  --grid-line: #e2e4ea;
+  --axis-line: #c6c9d2;
+  --hairline: rgba(11, 13, 18, 0.10);
+
+  /* --- Categorical series colors (validated, fixed order) --- */
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
+  --series-6: #008300;
+  --series-7: #4a3aa7;
+  --series-8: #e34948;
+
+  /* --- Status colors (reserved, never used as a series) --- */
+  --status-good: #0ca30c;
+  --status-warning: #fab219;
+  --status-serious: #ec835a;
+  --status-critical: #d03b3b;
+  --status-ontrack: #2a78d6;   /* spec severity "on_track" */
+  --delta-good-text: #006300;
+  --delta-bad-text: #b02a2a;
+
+  /* --- Accent (interaction, active states) --- */
+  --accent: #2a78d6;
+  --accent-soft: rgba(42, 120, 214, 0.12);
+
+  /* --- AI identity gradient (the USP accent) ---
+     Airbus Intelligence four-colour identity: rosé → violet →
+     azure → amber, shared with the portal (Apple-Intelligence-
+     style treatment). Slightly deepened on light ground. */
+  --ai-gradient: linear-gradient(100deg, #d6437a, #7e57e0 34%, #2f7ad6 68%, #d98a2b);
+
+  /* --- Geometry --- */
+  --radius-xl: 28px;   /* cards */
+  --radius-lg: 20px;   /* inner panels */
+  --radius-md: 14px;   /* chips, inputs */
+  --radius-sm: 10px;
+
+  --gap: 16px;
+  --pad-card: 20px;
+
+  --font-ui: system-ui, -apple-system, "Segoe UI", "SF Pro Display", sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #0b0e14;
+  --ambient-1: rgba(57, 135, 229, 0.16);
+  --ambient-2: rgba(144, 133, 233, 0.12);
+  --ambient-3: rgba(25, 158, 112, 0.10);
+
+  --glass-bg: rgba(28, 30, 36, 0.58);
+  --glass-bg-strong: rgba(32, 35, 42, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --glass-inner-line: rgba(255, 255, 255, 0.05);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.35);
+
+  --chart-surface: #1c1e24;
+
+  --text-primary: #f4f5f7;
+  --text-secondary: #b9bdc7;
+  --text-muted: #7d828e;
+
+  --grid-line: #2b2e36;
+  --axis-line: #3a3e48;
+  --hairline: rgba(255, 255, 255, 0.10);
+
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-3: #199e70;
+  --series-4: #c98500;
+  --series-5: #d55181;
+  --series-6: #008300;
+  --series-7: #9085e9;
+  --series-8: #e66767;
+
+  --status-ontrack: #4a9af5;
+  --delta-good-text: #0ca30c;
+  --delta-bad-text: #e66767;
+
+  --accent: #3987e5;
+  --accent-soft: rgba(57, 135, 229, 0.16);
+  --ai-gradient: linear-gradient(100deg, #f76e93, #ab7cf3 34%, #5da4f5 68%, #f7a95c);
+}
